@@ -2,7 +2,7 @@
 
 </script>
 
-<nav>
+<nav class="font-sm">
         <ul class="links">
             <li><a href='/#home'>Home</a></li>
             <li><a href='/#about'>About</a></li>
@@ -24,7 +24,7 @@
         justify-items: center;
 		padding: 1rem 0;
         font-weight: medium;
-	}
+    }
 
     ul:nth-child(1) { grid-column-start: 2; }
     ul:nth-child(2) { margin-left: auto; }

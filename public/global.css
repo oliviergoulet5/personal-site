@@ -6,6 +6,10 @@
 	--light-grey: #94969A;
 	--green: #4ECCA3;
 	--white: #EEE;
+	--font-sm: {
+		font-size: 0.875rem;
+		line-height: 0.5;
+	}
 }
 
 * {
@@ -29,6 +33,26 @@ body {
 	color: var(--white);
 	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
+	font-size: 1.125rem;
+	line-height: 1.75;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.font-sm {
 	font-size: 0.875rem;
-	line-height: 1.25rem;
+	line-height: 0.5;
+}
+
+.font-md {
+	font-size: 1.125rem;
+	line-height: 1.75;
 }
