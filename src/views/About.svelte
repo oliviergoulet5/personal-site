@@ -4,7 +4,7 @@
 
 <div id="about">
     <div>
-        <h1>About Me</h1>
+        <h1 class="font-sm">About Me</h1>
         <p>
             I've always been passionate about becoming a software developer. 
             I decided to pursue web development because it is what I think to be the most fun. 
@@ -12,7 +12,7 @@
         </p>
     </div>
     <div>
-        <h1>Education</h1>
+        <h1 class="font-sm">Education</h1>
         <p>
             In 2018, I moved to Toronto to study Computer Programming & Analysis at Seneca College.
             <br /><br />
@@ -26,13 +26,16 @@
     #about {
         margin-left: 12rem;
         margin-right: 12rem;
+        margin-top: 6rem;
         display: flex;
         justify-content: space-between;
+        
     }
     
     #about h1 {
         text-transform: uppercase;
         color: var(--green);
+        margin-bottom: 1.5rem;
     }
 
     #about p {
