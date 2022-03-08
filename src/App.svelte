@@ -14,4 +14,16 @@
 </main>
 
 <style>
+	main {
+		width: 80vw;
+		background-color: black;
+		margin: auto;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		main {
+			width: 100vw;
+		}
+	}
+
 </style>

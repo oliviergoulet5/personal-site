@@ -1,5 +1,5 @@
 <script>
-
+    import Button from '../components/Button.svelte';
 </script>
 
 <div id="home">
@@ -9,9 +9,8 @@
             <p>Are you looking for a web developer for your project?</p>
             <p>Send me a message!</p>
             <div id="button-row">
-                <span class="button download-button font-sm">Download CV</span>
-                <span class="button contact-button font-sm">Contact</span>
-
+                <Button text="Contact" type="secondary" />
+                <Button text="Download CV" type="primary" />
             </div>
         </div>
         <div id="portrait">
@@ -54,26 +53,6 @@
     #button-row {
         display: flex;
         margin-top: 2rem;
-    }
-
-    .download-button {
-        background-color: var(--green);
-        color: var(--white);
-    }
-
-    .contact-button {
-        background-color: var(--grey);
-        color: var(--white);
-        margin-left: 1rem;
-    }
-
-    .button {
-        text-transform: uppercase;
-        border-radius: 0.375rem;
-        max-width: fit-content;
-        padding: 1rem;
-        display: block;
-        cursor: pointer;
     }
 
     #portrait {
