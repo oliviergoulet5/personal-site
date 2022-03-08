@@ -23,6 +23,7 @@
         grid-column-gap: 5px;
         justify-items: center;
 		padding: 1rem 0;
+        font-weight: medium;
 	}
 
     ul:nth-child(1) { grid-column-start: 2; }

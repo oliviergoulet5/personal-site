@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Roboto:wght@300;400;500&display=swap');
 
 :root {
 	--black: #232931;
 	--grey: #393E46;
+	--light-grey: #94969A;
 	--green: #4ECCA3;
 	--white: #EEE;
 }
@@ -26,5 +27,8 @@ body {
 
 	background-color: var(--black);
 	color: var(--white);
-	font-family: 'Fredoka', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 }
