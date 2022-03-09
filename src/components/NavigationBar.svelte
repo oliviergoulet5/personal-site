@@ -1,7 +1,9 @@
 <script lang="ts">
+    export let menuClick: (event: MouseEvent) => void;
     import RoundButton from '../components/RoundButton.svelte';
     import Icon from '../components/Icon.svelte';
     import Menu from './icons/Menu.svelte';
+
 </script>
 
 <nav>
@@ -23,7 +25,7 @@
             <li>FRA</li>
             
             <li class="nav-button">
-                <RoundButton>
+                <RoundButton on:click={menuClick}>
                     <Icon name="Menu" color="white">
                         <Menu/>
                     </Icon>
