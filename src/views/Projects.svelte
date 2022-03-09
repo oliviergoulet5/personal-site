@@ -6,6 +6,7 @@ import Electron from '../components/icons/Electron.svelte';
 import Prisma from '../components/icons/Prisma.svelte';
 import Collapsible from '../components/Collapsible.svelte';
 import Tailwind from '../components/icons/Tailwind.svelte';
+import TypeScript from '../components/icons/TypeScript.svelte';
     interface TeamMember {
         name: string;
         url: string;
@@ -76,6 +77,27 @@ import Tailwind from '../components/icons/Tailwind.svelte';
                             <Collapsible heading="TailwindCSS">
                                 <span style="line-height: 0;" slot="icon">
                                     <img width={32} src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1200px-Tailwind_CSS_Logo.svg.png?20211001194333" alt=""/>
+                                </span>
+                                <div slot="content">
+                                    TailwindCSS allowed for quick and extremely customizable styling for our components. It also normalized of our styles which
+                                    was necessary to maintain a consistent UI.
+                                </div>
+                            </Collapsible>
+                        </li>
+                        <li>
+                            <Collapsible heading="TypeScript">
+                                <span style="line-height: 0; padding-left: 4px; padding-right: 4px;" slot="icon">
+                                    <img width={24} alt="TS" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png" />
+                                </span>
+                                <div slot="content">
+                                    TypeScript was the obvious choice for the language because of its type-safety.
+                                </div>
+                            </Collapsible>
+                        </li>
+                        <li>
+                            <Collapsible heading="Webpack">
+                                <span style="line-height: 0;" slot="icon">
+                                    <img width={32} src="https://gaeun917.github.io/assets/img/projects/badget/icon-webpack.png" alt="" />
                                 </span>
                             </Collapsible>
                         </li>
