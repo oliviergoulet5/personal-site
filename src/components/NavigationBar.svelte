@@ -1,56 +1,92 @@
 <script lang="ts">
-
+    import RoundButton from '../components/RoundButton.svelte';
+    import Icon from '../components/Icon.svelte';
+    import Menu from './icons/Menu.svelte';
 </script>
 
-<nav class="font-sm">
-        <ul class="links">
+<nav>
+    <div class="left">
+        <p>Olivier Goulet</p>
+    </div>
+    <div class="center">
+        <ul>
             <li><a href='/#home'>Home</a></li>
             <li><a href='/#about'>About</a></li>
             <li>Projects</li>
             <li>Resume</li>
             <li>Contact</li>
         </ul>
-        <ul class="languages">
+    </div>
+    <div class="right">
+        <ul>
             <li>ENG</li>
             <li>FRA</li>
+            
+            <li class="nav-button">
+                <RoundButton>
+                    <Icon name="Menu" color="white"><Menu/></Icon>
+                </RoundButton>
+            </li>
         </ul>
+    </div>
 </nav>
 
 <style>
-	nav {
-        display: grid;
-        grid-template-columns: 1fr repeat(1, auto) 1fr;
-        grid-column-gap: 5px;
-        justify-items: center;
-		padding: 3rem;
-        font-weight: medium;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem;
+        width: auto;
+        align-items: center;
     }
 
-    ul:nth-child(1) { grid-column-start: 2; }
-    ul:nth-child(2) { margin-left: auto; }
+    .nav-button {
+        display: inline-block;
+    }
+
+    .center {
+        display: none;
+    }
+
+    .right li:not(.nav-button) {
+        display: none;
+    }
 
     ul {
-		display: flex;
-		list-style-type: none;
-		text-transform: uppercase;
-        user-select: none;
+        list-style: none;
     }
 
-    ul.languages {
-        margin-right: 2rem;
-    }
+    @media (min-width: 640px) {
+        nav {
+            display: grid;
+            grid-template-columns: 1fr repeat(1, auto) 1fr;
+            grid-column-gap: 5px;
+            justify-items: center;
+            font-weight: medium;
+            text-transform: uppercase;
+        }
 
-    li {
-        margin-left: 2rem;
-    }
+        .nav-button {
+            display: none;
+        }
 
-    li:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
+        .center {
+            display: inline-block;
+        }
 
-    a {
-        text-decoration: none;
-        color: inherit;
+        .center ul {
+            display: flex;
+        }
+
+        ul li {
+            margin-left: 2rem;
+        }
+
+        .right li:not(.nav-button) {
+            display: inline-block;
+        }
+        nav div:nth-child(1) { margin-right: auto; }
+        nav div:nth-child(2) { grid-column-start: 2; }
+        nav div:last-child { margin-left: auto; }
     }
 </style>
