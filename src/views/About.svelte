@@ -3,7 +3,7 @@
 </script>
 
 <div id="about">
-    <h1>About</h1>
+    <h1 class="header-lg">About</h1>
     <div id="content">
         <div>
             <h2 class="font-sm">About Me</h2>
@@ -31,9 +31,7 @@
         min-height: 100vh;
     }
 
-    h1 {
-        margin-bottom: 1.75rem;
-    }
+
     #content {
         display: flex;
         flex-direction: column;

@@ -2,6 +2,7 @@
 	import NavigationBar from './components/NavigationBar.svelte';
 	import Home from './views/Home.svelte';
 	import About from './views/About.svelte';
+	import Projects from './views/Projects.svelte';
 	import MenuOverlay from './components/MenuOverlay.svelte';
 
 	$: menuActive = false;
@@ -18,6 +19,7 @@
 <main>
 	<Home />
 	<About />
+	<Projects />
 	{#if menuActive}
 		<MenuOverlay />
 	{/if}
