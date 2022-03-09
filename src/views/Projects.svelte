@@ -5,6 +5,7 @@ import React from '../components/icons/React.svelte';
 import Electron from '../components/icons/Electron.svelte';
 import Prisma from '../components/icons/Prisma.svelte';
 import Collapsible from '../components/Collapsible.svelte';
+import Tailwind from '../components/icons/Tailwind.svelte';
     interface TeamMember {
         name: string;
         url: string;
@@ -42,7 +43,7 @@ import Collapsible from '../components/Collapsible.svelte';
                                     </Icon>
                                 </span>
                                 <div slot="content">
-                                    Hello, world!
+                                    React was used as the main front-end library for composing the user interface.
                                 </div>
                             </Collapsible>
                         </li>
@@ -54,7 +55,7 @@ import Collapsible from '../components/Collapsible.svelte';
                                     </Icon>
                                 </span>
                                 <div slot="content">
-                                    Hello, world!
+                                    Electron was used to create a cross-platform desktop application using web technologies.
                                 </div>
                             </Collapsible>
                         </li>
@@ -66,8 +67,16 @@ import Collapsible from '../components/Collapsible.svelte';
                                     </Icon>
                                 </span>
                                 <div slot="content">
-                                    
+                                    Prisma was used as the ORM which interacted with our database. Prisma also allowed us to quickly
+                                    generate types for our models.
                                 </div>
+                            </Collapsible>
+                        </li>
+                        <li>
+                            <Collapsible heading="TailwindCSS">
+                                <span style="line-height: 0;" slot="icon">
+                                    <img width={32} src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1200px-Tailwind_CSS_Logo.svg.png?20211001194333" alt=""/>
+                                </span>
                             </Collapsible>
                         </li>
                     </ul>
@@ -142,13 +151,21 @@ import Collapsible from '../components/Collapsible.svelte';
     }
 
     ul {
-        width: 50%;
+        width: 100%;
+    }
+
+    @media (min-width: 640px) {
+        ul { width: 50%; }
     }
 
     @media (min-width: 1280px) {
         .project {
             flex-direction: row;
             justify-content: space-between;
+        }
+
+        ul {
+            width: 100%;
         }
     }
 
