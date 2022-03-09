@@ -1,6 +1,9 @@
 <script lang="ts">
     import Link from '../components/icons/Link.svelte';
     import Icon from '../components/Icon.svelte';
+import React from '../components/icons/React.svelte';
+import Electron from '../components/icons/Electron.svelte';
+import Prisma from '../components/icons/Prisma.svelte';
     interface TeamMember {
         name: string;
         url: string;
@@ -25,7 +28,19 @@
             If the user chooses PrivaNote Vault, they will have the ability to synchronize their notes privately
             and securely with the use of E2E encryption.
         </p>
-        <h3 class='font-sm'>THE TEAM</h3>
+        <h3 class="font-sm">Technologies used</h3>
+        <div class="team">
+            <Icon name="React" color="#61dafb">
+                <React />
+            </Icon>
+            <Icon name="Electron" color="#9feaf9">
+                <Electron />
+            </Icon>
+            <Icon name="Prisma" color="#38a169">
+                <Prisma />
+            </Icon>
+        </div>
+        <h3 class='font-sm'>The Team</h3>
         <div class="team">
             {#each privaNoteTeam as member}
             <a href={member.url}><img src={member.avatarUrl} alt={member.name}/></a>
@@ -72,6 +87,7 @@
     h3 {
         margin-top: 3rem;
         margin-bottom: 1rem;
+        text-transform: uppercase;
     }
 
     .team {
