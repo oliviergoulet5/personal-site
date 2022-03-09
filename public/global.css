@@ -6,10 +6,12 @@
 	--light-grey: #94969A;
 	--green: #4ECCA3;
 	--white: #EEE;
+	--screen-sm: 640px;
+	--screen-lg: 1024px;
 	--font-sm: {
 		font-size: 0.875rem;
 		line-height: 0.5;
-	}
+	};
 }
 
 * {

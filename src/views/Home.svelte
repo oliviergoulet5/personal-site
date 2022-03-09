@@ -23,22 +23,24 @@
 
     #home {
         display: flex;
-        justify-content: center;
         flex-direction: column;
         height: 100vh;
     }
 
     #home-content {
         display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
     }
 
     #summary {
-        margin-left: 12rem;
         align-self: center;
     }
+
     
     #summary h1 {
-        font-size: 3.75rem;
+        font-size: 1.5rem;
         line-height: 1;
         font-weight: normal;
         margin-bottom: 1rem;
@@ -48,6 +50,23 @@
         color: var(--light-grey);
         font-size: 1.125rem;
         line-height: 1.75;
+    }
+
+    @media (min-width: 640px) {
+        #home {
+            justify-content: center;
+        }
+
+        #home-content {
+            flex-direction: row;
+            justify-content: flex-start;
+            text-align: start;
+        }
+
+        #summary h1 {
+            font-size: 3.75rem;
+            line-height: 1;
+        }
     }
 
     #button-row {
