@@ -29,16 +29,30 @@ import Prisma from '../components/icons/Prisma.svelte';
             and securely with the use of E2E encryption.
         </p>
         <h3 class="font-sm">Technologies used</h3>
-        <div class="team">
-            <Icon name="React" color="#61dafb">
-                <React />
-            </Icon>
-            <Icon name="Electron" color="#9feaf9">
-                <Electron />
-            </Icon>
-            <Icon name="Prisma" color="#38a169">
-                <Prisma />
-            </Icon>
+        <div class="tech">
+            <ul>
+                <li>
+                    <Icon name="React" color="#61dafb">
+                        <React />
+                    </Icon>
+                    <span>React</span>
+                </li>
+                <li>
+                    <Icon name="Electron" color="#9feaf9">
+                        <Electron />
+                    </Icon>
+                    <span>Electron</span>
+                </li>
+                <li>
+                    <Icon name="Prisma" color="#38a169">
+                        <Prisma />
+                    </Icon>
+                    <span>Prisma</span>
+                </li>
+            </ul>
+
+
+
         </div>
         <h3 class='font-sm'>The Team</h3>
         <div class="team">
@@ -98,6 +112,18 @@ import Prisma from '../components/icons/Prisma.svelte';
         border-radius: 9999px;
         width: 3rem;
         margin-left: 0.5rem;
+    }
+
+    .tech ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .tech ul li span {
+        margin-left: 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
     }
 
 </style>
