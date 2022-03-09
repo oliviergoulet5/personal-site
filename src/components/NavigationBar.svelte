@@ -1,8 +1,11 @@
 <script lang="ts">
     export let menuClick: (event: MouseEvent) => void;
+    export let menuActive: boolean = false;
+
     import RoundButton from '../components/RoundButton.svelte';
     import Icon from '../components/Icon.svelte';
     import Menu from './icons/Menu.svelte';
+    import Close from './icons/Close.svelte';
 
 </script>
 
@@ -27,7 +30,11 @@
             <li class="nav-button">
                 <RoundButton on:click={menuClick}>
                     <Icon name="Menu" color="white">
-                        <Menu/>
+                        {#if !menuActive}
+                            <Menu />
+                        {:else}
+                            <Close />
+                        {/if}
                     </Icon>
                 </RoundButton>
             </li>

@@ -6,14 +6,14 @@
 
 	$: menuActive = false;
 	const handleMenuClick = (event: MouseEvent) => {
-		menuActive = true;
+		menuActive = !menuActive;
 	}
 
 	$: console.log(menuActive);
 </script>
 
 <header>
-	<NavigationBar menuClick={handleMenuClick}/>
+	<NavigationBar menuActive={menuActive} menuClick={handleMenuClick}/>
 </header>
 <main>
 	<Home />
