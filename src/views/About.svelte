@@ -29,6 +29,7 @@
         margin-top: 6rem;
         display: flex;
         justify-content: space-between;
+        min-height: 100vh;
         
     }
     

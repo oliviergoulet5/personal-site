@@ -25,6 +25,7 @@
         display: flex;
         flex-direction: column;
         height: 100vh;
+        justify-content: center;
     }
 
     #home-content {
@@ -72,16 +73,36 @@
     #button-row {
         display: flex;
         margin-top: 2rem;
+        justify-content: center;
     }
 
     #portrait {
-        align-self: center;
         margin-left: auto;
         margin-right: auto;
+        border-radius: 9999px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: transparent;
+        padding: 4px;
+        width: 30vw;
+        height: 30vw;
+        margin-bottom: 2rem;
+    }
+
+    #portrait:hover {
+        border-color: var(--white);
+        animation-name: portrait-hover;
+        animation-duration: 0.2s;
     }
 
     #portrait img {
         border-radius: 9999px;
-        width: 30vw;
+        width: inherit;
+        height: inherit;
+    }
+
+    @keyframes portrait-hover {
+        from { border-color: transparent; }
+        to { border-color: var(--white); }
     }
 </style>

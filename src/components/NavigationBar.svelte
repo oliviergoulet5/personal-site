@@ -24,7 +24,9 @@
             
             <li class="nav-button">
                 <RoundButton>
-                    <Icon name="Menu" color="white"><Menu/></Icon>
+                    <Icon name="Menu" color="white">
+                        <Menu/>
+                    </Icon>
                 </RoundButton>
             </li>
         </ul>
@@ -35,7 +37,7 @@
     nav {
         display: flex;
         justify-content: space-between;
-        padding: 3rem;
+        padding: 1rem;
         width: auto;
         align-items: center;
     }
@@ -64,6 +66,7 @@
             justify-items: center;
             font-weight: medium;
             text-transform: uppercase;
+            padding: 3rem;
         }
 
         .nav-button {
