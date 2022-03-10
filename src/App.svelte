@@ -1,6 +1,6 @@
 <script lang="ts">
 	import NavigationBar from './components/NavigationBar.svelte';
-	import Home from './views/Home.svelte';
+	import Home from './views/home/Home.svelte';
 	import About from './views/About.svelte';
 	import Projects from './views/Projects.svelte';
 	import MenuOverlay from './components/MenuOverlay.svelte';

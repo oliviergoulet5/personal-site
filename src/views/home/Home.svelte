@@ -1,16 +1,18 @@
-<script>
-    import Button from '../components/Button.svelte';
+<script lang="ts">
+    import Button from '../../components/Button.svelte';
+    import { translations } from './translations';
+    const text = translations["fr"];
 </script>
 
 <div id="home">
     <div id="home-content">
         <div id="summary">
-            <h1>Hey, I'm Olivier Goulet 👋</h1>
-            <p>Are you looking for a web developer for your project?</p>
-            <p>Send me a message!</p>
+            <h1>{ text.summary.header }</h1>
+            <p>{ text.summary.pitch }</p>
+            <p>{ text.summary.contactMe }</p>
             <div id="button-row">
-                <Button text="Contact" type="secondary" />
-                <Button text="Download CV" type="primary" />
+                <Button text={ text.summary.contactButtonText} type="secondary" />
+                <Button text={ text.summary.downloadCVButtonText } type="primary" />
             </div>
         </div>
         <div id="portrait">
