@@ -21,7 +21,7 @@
 	<About />
 	<Projects />
 	{#if menuActive}
-		<MenuOverlay />
+		<MenuOverlay handleMenuClick={handleMenuClick}/>
 	{/if}
 </main>
 

@@ -1,10 +1,21 @@
 <script lang="ts">
+    import { translations } from './navigationBar/translations';
+    import { langStore } from '../stores';
+    export let handleMenuClick: (event: MouseEvent) => void;
+    let lang: "en" | "fr";
+    langStore.subscribe(value => lang = value);
+    $: text = translations[lang];
+
 </script>
 
 <div id="menu-overlay">
     <div id="menu-content">
-        <ul>
-            <li>Home</li>
+        <ul on:click={handleMenuClick}>
+            <li><a href="/#home">{text.links.home}</a></li>
+            <li><a href="/#about">{text.links.about}</a></li>
+            <li><a href="/#projects">{text.links.projects}</a></li>
+            <li><a href="/#resume">{text.links.resume}</a></li>
+            <li><a href="/#contact">{text.links.contact}</a></li>
         </ul>
     </div>
 </div>
