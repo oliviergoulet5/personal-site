@@ -1,20 +1,22 @@
 <script lang="ts">
     export let menuClick: (event: MouseEvent) => void;
     export let menuActive: boolean = false;
-    import { langStore } from '../stores';
-    import RoundButton from '../components/RoundButton.svelte';
-    import Icon from '../components/Icon.svelte';
-    import Menu from './icons/Menu.svelte';
-    import Close from './icons/Close.svelte';
+    import { langStore } from '../../stores';
+    import RoundButton from '../RoundButton.svelte';
+    import Icon from '../Icon.svelte';
+    import Menu from '../icons/Menu.svelte';
+    import Close from '../icons/Close.svelte';
+    import { translations } from './translations';
 
-
-    let lang;
+    let lang: "en" | "fr";
     langStore.subscribe(value => lang = value);
 
     const changeLanguage = (language: "en" | "fr") => {
         langStore.set(language);
         console.log(lang);
     }
+
+    $: text = translations[lang];
 
 </script>
 
@@ -24,11 +26,11 @@
     </div>
     <div class="center">
         <ul>
-            <li><a href='/#home'>Home</a></li>
-            <li><a href='/#about'>About</a></li>
-            <li><a href="/#projects">Projects</a></li>
-            <li><a href="/#resume">Resume</li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href='/#home'>{text.links.home}</a></li>
+            <li><a href='/#about'>{text.links.about}</a></li>
+            <li><a href="/#projects">{text.links.projects}</a></li>
+            <li><a href="/#resume">{text.links.resume}</li>
+            <li><a href="/#contact">{text.links.contact}</a></li>
         </ul>
     </div>
     <div class="right">
