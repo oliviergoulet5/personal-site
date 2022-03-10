@@ -49,6 +49,8 @@ import ChevronUp from "./icons/ChevronUp.svelte";
         padding: 0.5rem;
         border-radius: 0.5rem;
         box-sizing: border-box;
+        cursor: pointer;
+        user-select: none;
     }
 
     .collapsible-button:hover {
