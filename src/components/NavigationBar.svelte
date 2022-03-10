@@ -1,11 +1,20 @@
 <script lang="ts">
     export let menuClick: (event: MouseEvent) => void;
     export let menuActive: boolean = false;
-
+    import { langStore } from '../stores';
     import RoundButton from '../components/RoundButton.svelte';
     import Icon from '../components/Icon.svelte';
     import Menu from './icons/Menu.svelte';
     import Close from './icons/Close.svelte';
+
+
+    let lang;
+    langStore.subscribe(value => lang = value);
+
+    const changeLanguage = (language: "en" | "fr") => {
+        langStore.set(language);
+        console.log(lang);
+    }
 
 </script>
 
@@ -24,8 +33,8 @@
     </div>
     <div class="right">
         <ul>
-            <li>ENG</li>
-            <li>FRA</li>
+            <li on:click={ () => { changeLanguage("en") }}>ENG</li>
+            <li on:click={ () => { changeLanguage("fr") }}>FRA</li>
             
             <li class="nav-button">
                 <RoundButton on:click={menuClick}>

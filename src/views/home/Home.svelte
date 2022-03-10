@@ -1,7 +1,12 @@
 <script lang="ts">
     import Button from '../../components/Button.svelte';
     import { translations } from './translations';
-    const text = translations["fr"];
+    import { langStore } from '../../stores';
+    let lang;
+
+    langStore.subscribe(value => lang = value);
+
+    $: text = translations[lang];
 </script>
 
 <div id="home">
