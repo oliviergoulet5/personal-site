@@ -1,25 +1,28 @@
-<script>
+<script lang="ts">
+    import { translations } from './translations';
+    import { langStore } from '../../stores';
 
+    let lang: "en" | "fr";
+    langStore.subscribe(value => lang = value);
+
+    $: text = translations[lang];
 </script>
 
 <div id="about">
-    <h1 class="header-lg">About</h1>
+    <h1 class="header-lg">{text.header}</h1>
     <div id="content">
         <div>
-            <h2 class="font-sm">About Me</h2>
+            <h2 class="font-sm">{text.aboutMe.header}</h2>
             <p>
-                I've always been passionate about becoming a software developer. 
-                I decided to pursue web development because it is what I think to be the most fun. 
-                When I am not sitting at a computer I enjoy watching sports and movies with family & friends.
+                { text.aboutMe.paragraph }
             </p>
         </div>
         <div>
-            <h2 class="font-sm">Education</h2>
+            <h2 class="font-sm">{text.education.header}</h2>
             <p>
-                In 2018, I moved to Toronto to study Computer Programming & Analysis at Seneca College.
+                { text.education.summary}
                 <br /><br />
-                During my college years, I attended multiple hackathons and met plenty of interesting future software developers.
-                These events inspired me to keep on learning beyond the standard curriculum and to pursue side-projects that I can be proud of.
+                { text.education.hackathons }
             </p>
         </div>
     </div>

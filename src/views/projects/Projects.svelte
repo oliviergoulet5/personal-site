@@ -1,12 +1,18 @@
 <script lang="ts">
-    import Link from '../components/icons/Link.svelte';
-    import Icon from '../components/Icon.svelte';
-import React from '../components/icons/React.svelte';
-import Electron from '../components/icons/Electron.svelte';
-import Prisma from '../components/icons/Prisma.svelte';
-import Collapsible from '../components/Collapsible.svelte';
-import Tailwind from '../components/icons/Tailwind.svelte';
-import TypeScript from '../components/icons/TypeScript.svelte';
+    import Link from '../../components/icons/Link.svelte';
+    import Icon from '../../components/Icon.svelte';
+    import React from '../../components/icons/React.svelte';
+    import Electron from '../../components/icons/Electron.svelte';
+    import Prisma from '../../components/icons/Prisma.svelte';
+    import Collapsible from '../../components/Collapsible.svelte';
+    import { langStore } from '../../stores';
+    import { translations } from './translations';
+    
+    let lang: "en" | "fr";
+    langStore.subscribe(value => lang = value);
+
+    $: text = translations[lang];
+
     interface TeamMember {
         name: string;
         url: string;
@@ -21,19 +27,17 @@ import TypeScript from '../components/icons/TypeScript.svelte';
 </script>
 
 <div id="projects">
-    <h1 class="header-lg">Projects</h1>
+    <h1 class="header-lg">{ text.header }</h1>
     <div class="projects-content">
         <div class="project">
             <div>    
-                <h2 class='header font-sm'><a href="https://github.com/PrivaNoteTeam/PrivaNote">PrivaNote <Icon name="Link" width={20}><Link /></Icon></a></h2>
-                <p>PrivaNote is a secure note-taking desktop application which runs on macOS and Windows.
-                    It allows users to take notes in Markdown to allow for quick and beautiful notes on the fly.
+                <h2 class='header font-sm'><a href="https://github.com/PrivaNoteTeam/PrivaNote">{ text.privaNote.title } <Icon name="Link" width={20}><Link /></Icon></a></h2>
+                <p>
+                    { text.privaNote.firstBlock}
                     <br/><br/>
-                    Notes can synchronize with cloud storages such as Google Drive, or PrivaNote Vault.
-                    If the user chooses PrivaNote Vault, they will have the ability to synchronize their notes privately
-                    and securely with the use of E2E encryption.
+                    { text.privaNote.secondBlock}
                 </p>
-                <h3 class="font-sm">Technologies used</h3>
+                <h3 class="font-sm">{text.technologiesUsed}</h3>
                 <div class="tech">
                     <ul>
                         <li>
@@ -44,7 +48,7 @@ import TypeScript from '../components/icons/TypeScript.svelte';
                                     </Icon>
                                 </span>
                                 <div slot="content">
-                                    React was used as the main front-end library for composing the user interface.
+                                    { text.privaNote.reactDescription }
                                 </div>
                             </Collapsible>
                         </li>
@@ -56,7 +60,7 @@ import TypeScript from '../components/icons/TypeScript.svelte';
                                     </Icon>
                                 </span>
                                 <div slot="content">
-                                    Electron was used to create a cross-platform desktop application using web technologies.
+                                    { text.privaNote.electronDescription }
                                 </div>
                             </Collapsible>
                         </li>
@@ -68,8 +72,7 @@ import TypeScript from '../components/icons/TypeScript.svelte';
                                     </Icon>
                                 </span>
                                 <div slot="content">
-                                    Prisma was used as the ORM which interacted with our database. Prisma also allowed us to quickly
-                                    generate types for our models.
+                                   { text.privaNote.prismaDescription } 
                                 </div>
                             </Collapsible>
                         </li>
@@ -79,8 +82,7 @@ import TypeScript from '../components/icons/TypeScript.svelte';
                                     <img width={32} src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1200px-Tailwind_CSS_Logo.svg.png?20211001194333" alt=""/>
                                 </span>
                                 <div slot="content">
-                                    TailwindCSS allowed for quick and extremely customizable styling for our components. It also normalized of our styles which
-                                    was necessary to maintain a consistent UI.
+                                    { text.privaNote.tailwindCssDescription }
                                 </div>
                             </Collapsible>
                         </li>
@@ -90,7 +92,7 @@ import TypeScript from '../components/icons/TypeScript.svelte';
                                     <img width={24} alt="TS" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png" />
                                 </span>
                                 <div slot="content">
-                                    TypeScript was the obvious choice for the language because of its type-safety.
+                                    { text.privaNote.typescriptDescription }
                                 </div>
                             </Collapsible>
                         </li>
@@ -103,7 +105,7 @@ import TypeScript from '../components/icons/TypeScript.svelte';
                         </li>
                     </ul>
                 </div>
-                <h3 class='font-sm'>The Team</h3>
+                <h3 class='font-sm'>{ text.team }</h3>
                 <div class="team">
                     {#each privaNoteTeam as member}
                     <a href={member.url}><img src={member.avatarUrl} alt={member.name}/></a>
@@ -117,7 +119,7 @@ import TypeScript from '../components/icons/TypeScript.svelte';
                     alt="PrivaNote UI"
                 />
                 <figcaption class="font-sm">
-                    Editing a note in PrivaNote.
+                    {text.privaNote.caption}
                 </figcaption>
             </figure>
         </div>
