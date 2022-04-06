@@ -16,10 +16,10 @@ export function NavigationBar() {
             </div>
             <ul className="list-none flex space-x-6 justify-center">
                 <NavigationLink href="/#home" text={t("navigationBar.links.home")} />
-                <NavigationLink href="/#about" text="about" />
-                <NavigationLink href="/#projects" text="projects" />
-                <NavigationLink href="/#resume" text="resume" />
-                <NavigationLink href="/#contact" text="contact" />
+                <NavigationLink href="/#about" text={t("navigationBar.links.about")} />
+                <NavigationLink href="/#projects" text={t("navigationBar.links.projects")} />
+                <NavigationLink href="/#resume" text={t("navigationBar.links.resume")} />
+                <NavigationLink href="/#contact" text={t("navigationBar.links.contact")} />
             </ul>
             <div className="flex space-x-6 justify-end">
                 <button onClick={ () => changeLanguage("en") }>EN</button>
