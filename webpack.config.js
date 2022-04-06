@@ -21,8 +21,8 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"]
-            }
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
+            },
         ]
     },
     devtool: prod ? undefined : "source-map",
@@ -30,6 +30,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "index.html"
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            filename: "styles.css",
+            chunkFilename: "styles.css"
+        })
     ]
 }
