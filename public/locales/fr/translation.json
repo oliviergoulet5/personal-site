@@ -1,0 +1,16 @@
+{
+    "heading": "Salut, je m'appelle Olivier Goulet 👋",
+    "subheading": {
+        "part1": "Votre projet nécessite-t-il un développeur web?",
+        "part2": "Lancez-moi un message!"
+    },
+    "navigationBar": {
+        "links": {
+            "home": "Acceuil",
+            "about": "À propos",
+            "projects": "Projets",
+            "resume": "Resumé",
+            "contact": "Contactez"
+        }
+    }
+}

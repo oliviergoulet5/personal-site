@@ -1,0 +1,16 @@
+{
+    "heading": "Hey, I'm Olivier Goulet 👋",
+    "subheading": { 
+        "part1": "Are you looking for a web developer for your project?",
+        "part2": "Send me a message!"
+    },
+    "navigationBar": {
+        "links": {
+            "home": "Home",
+            "about": "About",
+            "projects": "Projects",
+            "resume": "Resume",
+            "contact": "Contact"
+        }
+    }
+}
