@@ -35,8 +35,8 @@
     </div>
     <div class="right">
         <ul>
-            <li on:click={ () => { changeLanguage("en") }}>ENG</li>
-            <li on:click={ () => { changeLanguage("fr") }}>FRA</li>
+            <li class="button" on:click={ () => { changeLanguage("en") }}>ENG</li>
+            <li class="button" on:click={ () => { changeLanguage("fr") }}>FRA</li>
             
             <li class="nav-button">
                 <RoundButton on:click={menuClick}>
@@ -76,6 +76,14 @@
 
     ul {
         list-style: none;
+    }
+
+    .button {
+        cursor: pointer;
+    }
+
+    .button:hover {
+        text-decoration: underline;
     }
 
     @media (min-width: 640px) {
