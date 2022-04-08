@@ -1,8 +1,14 @@
 {
-    "heading": "Hey, I'm Olivier 👋",
-    "subheading": { 
-        "part1": "Are you looking for a web developer for your project?",
-        "part2": "Send me a message!"
+    "home": {
+        "heading": "Hey, I'm Olivier 👋",
+        "subheading": { 
+            "part1": "Are you looking for a web developer for your project?",
+            "part2": "Send me a message!"
+        },
+        "buttons": {
+            "contact": "Contact",
+            "download": "Download CV"
+        }
     },
     "navigationBar": {
         "links": {
