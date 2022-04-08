@@ -12,12 +12,15 @@ export function App() {
             <header>
                 <NavigationBar menuActive={menuActive} onMenuClick={ () => setMenuActive(!menuActive) } />
             </header>
-            <main className="relative h-full w-screen sm:w-10/12 m-auto">
+            <main className="relative w-11/12 sm:w-10/12 m-auto">
                 <div className="hidden bg-yellow-300 bg-opacity-20 border-2 rounded-lg p-1 mb-2 text-center border-opacity-20 border-yellow-500 text-sm">Website is still in development!</div>
                 <Home />
                 <About />
                 { menuActive && <MenuOverlay onClose={ () => setMenuActive(!menuActive) } />}
             </main>
+            <footer className="h-14 w-full">
+                
+            </footer>
         </div>
     );
 }

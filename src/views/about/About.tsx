@@ -1,25 +1,29 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function About() {
+    const { t } = useTranslation();
     return (
-        <div className="">
-            <h1 className="ps-heading">About</h1>
-            <div className="text-gray-300 flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
-                <div>
-                    <h2 className="ps-subheading">About Me</h2>
-                    <p className="mb-2">I have been passionate about software development for many years now. 
-                        My interests shifted from game development to systems programming and, 
-                        finally, into web development.
-                    </p>
-                    <p>When I am not sitting in front of a computer, I like to watch hockey and MMA.</p>
+        <div id="about" className="">
+            <h1 className="ps-heading">{ t("about.heading") }</h1>
+            <div className="flex flex-col sm:flex-row sm:space-x-8 sm:space-y-0 space-y-8">
+                <div className="text-gray-300 flex flex-col space-y-4 sm:space-y-0">
+                    <div>
+                        <h2 className="ps-subheading">{ t("about.aboutMe.heading") }</h2>
+                        <p className="mb-3">{ t("about.aboutMe.part1") }</p>
+                        <p>{ t("about.aboutMe.part2") }</p>
+                    </div>
+                    <div>
+                        <h2 className="ps-subheading">{ t("about.education.heading") }</h2>
+                        <p className="mb-3">{ t("about.education.part1") }</p>
+                        <p>{ t("about.education.part2") }</p>
+                    </div>
                 </div>
                 <div>
-                    <h2 className="ps-subheading">Education</h2>
-                    <p className="mb-2">In 2018, I moved to Toronto to study Computer Programming & Analysis at Seneca College.</p>
-                    <p>I attended multiple hackathons during my college years and met plenty of interesting future software 
-                        developers. These events inspired me to keep learning beyond the standard curriculum and pursue side-projects 
-                        that I can be proud of.
-                    </p>
+                    <figure className="text-center text-xs text-gray-300">
+                        <img className="rounded-xl shadow-2xl" src="images/nsbehacks.png" />
+                        <figcaption className="mt-4">{ t("about.caption") }</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>

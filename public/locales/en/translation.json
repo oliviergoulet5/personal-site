@@ -10,6 +10,20 @@
             "download": "Download CV"
         }
     },
+    "about": {
+        "heading": "About",
+        "aboutMe": {
+            "heading": "About Me",
+            "part1": "I have been passionate about software development for many years now. My interests shifted from game development to systems programming and, finally, into web development.",
+            "part2": "When I am not sitting in front of a computer, I like to watch hockey and MMA."
+        },
+        "education": {
+            "heading": "Education",
+            "part1": "In 2018, I moved to Toronto to study Computer Programming & Analysis at Seneca College.",
+            "part2": "I attended multiple hackathons during my college years and met plenty of interesting future software developers. These events inspired me to keep learning beyond the standard curriculum and pursue side-projects that I can be proud of."
+        },
+        "caption": "Attending the first NSBEHacks at the University of Toronto, 2018."
+    },
     "navigationBar": {
         "links": {
             "home": "Home",
