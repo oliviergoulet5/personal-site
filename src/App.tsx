@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MenuOverlay } from './components/menuOverlay/MenuOverlay';
 import { NavigationBar } from './components/navigationBar/NavigationBar';
 import { About } from './views/about/About';
+import { Contact } from './views/contact/Contact';
 import { Home } from './views/home/Home';
 import { Projects } from './views/projects/Projects';
 
@@ -19,6 +20,7 @@ export function App() {
                 <Home />
                 <About />
                 <Projects />
+                <Contact />
                 </div>
                 { menuActive && <MenuOverlay onClose={ () => setMenuActive(!menuActive) } />}
             </main>
