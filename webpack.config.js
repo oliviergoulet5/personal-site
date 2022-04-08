@@ -7,7 +7,7 @@ module.exports = {
     mode: prod ? "production" : "development",
     entry: "./src/index.tsx",
     output: {
-        path: __dirname + "/dist/",
+        path: __dirname + "/dist/"
     },
     module: {
         rules: [
@@ -27,9 +27,9 @@ module.exports = {
                 test: /\.(png|jpe?g|gif)$/i,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: 'url-loader',
                     },
-                ],
+                ]
             }
         ]
     },
