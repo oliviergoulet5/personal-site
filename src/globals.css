@@ -22,4 +22,16 @@ html {
     .ps-caption {
         @apply text-center text-xs text-gray-300 mt-4
     }
+
+    .ps-input {
+        @apply rounded-lg bg-gray-700 p-2 border-2 border-transparent focus:border-white outline-none;
+    }
+
+    .ps-label {
+        @apply text-xs uppercase text-white;
+    }
+
+    .ps-input-group {
+        @apply flex flex-col space-y-1;
+    }
 }
