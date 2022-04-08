@@ -24,7 +24,7 @@ export function Collapsible({ heading, icon, iconColor, children }: PropsWithChi
                 </span>
                 { collapsed ? <IoChevronUp size="100%" className="w-8" /> : <IoChevronDown size="100%" className="w-8" /> }
             </div>
-            { collapsed && 
+            { !collapsed && 
                 <div className="flex mt-2">
                     <span className="shrink-0 inline-block w-px ml-6 mr-2 bg-gray-500" />
                     <div className="text-sm text-gray-300">
