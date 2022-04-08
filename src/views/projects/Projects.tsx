@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { SiTailwindcss, SiTypescript, SiWebpack } from 'react-icons/si';
 import { IoLink, IoLogoElectron, IoLogoReact, IoPrism } from 'react-icons/io5';
 import { Collapsible } from '../../components/collapsible/Collapsible';
+import { Collaborator } from '../../components/collaborator/Collaborator';
 
 export function Projects() {
     const { t } = useTranslation();
@@ -23,7 +24,7 @@ export function Projects() {
                                 <p>{ t("projects.privanote.description.part2") }</p>
                             </div>
                             <div>
-                                <h3 className="text-sm font-bold uppercase mb-4">Technologies Used</h3>
+                                <h3 className="ps-subheading-sm">Technologies Used</h3>
                                 <div className="flex flex-col space-y-2">
                                     <Collapsible heading="React" icon={IoLogoReact} iconColor="#61dafb">
                                         { t("projects.privanote.technologies.react") }
@@ -43,6 +44,16 @@ export function Projects() {
                                     <Collapsible heading="Webpack" icon={ SiWebpack } iconColor="#8ed6fb">
                                         { t("projects.privanote.technologies.webpack") }
                                     </Collapsible>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 className="ps-subheading-sm">The Team</h3>
+                                <div className="flex space-x-1">
+                                    <Collaborator profileUrl="https://github.com/oliviergoulet5" avatarUrl="https://avatars.githubusercontent.com/u/17685861?v=4" />
+                                    <Collaborator profileUrl="https://github.com/thejasonxie" avatarUrl="https://avatars.githubusercontent.com/u/34463193?v=4" />
+                                    <Collaborator profileUrl="https://github.com/parsa111" avatarUrl="https://avatars.githubusercontent.com/u/48108158?v=4" />
+                                    <Collaborator profileUrl="https://github.com/EHSANHAZARI" avatarUrl="https://avatars.githubusercontent.com/u/57685610?v=4" />
+
                                 </div>
                             </div>
                         </div>
