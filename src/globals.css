@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 @layer components {
     .ps-heading {
         @apply text-3xl text-white font-semibold;
