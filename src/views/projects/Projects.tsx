@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { IoLink, IoLogoElectron, IoLogoReact } from 'react-icons/io5';
+import { SiTailwindcss, SiTypescript, SiWebpack } from 'react-icons/si';
+import { IoLink, IoLogoElectron, IoLogoReact, IoPrism } from 'react-icons/io5';
 import { Collapsible } from '../../components/collapsible/Collapsible';
 
 export function Projects() {
@@ -29,6 +30,18 @@ export function Projects() {
                                     </Collapsible>
                                     <Collapsible heading="Electron" icon={IoLogoElectron} iconColor="#9feaf9">
                                         { t("projects.privanote.technologies.electron") }
+                                    </Collapsible>
+                                    <Collapsible heading="Prisma" icon={ IoPrism } iconColor="#38a169">
+                                        { t("projects.privanote.technologies.prisma") }
+                                    </Collapsible>
+                                    <Collapsible heading="TailwindCSS" icon={ SiTailwindcss } iconColor="#38bdf8">
+                                        { t("projects.privanote.technologies.tailwindcss") }
+                                    </Collapsible>
+                                    <Collapsible heading="TypeScript" icon={ SiTypescript } iconColor="#007acc">
+                                        { t("projects.privanote.technologies.typescript") }
+                                    </Collapsible>
+                                    <Collapsible heading="Webpack" icon={ SiWebpack } iconColor="#8ed6fb">
+                                        { t("projects.privanote.technologies.webpack") }
                                     </Collapsible>
                                 </div>
                             </div>
