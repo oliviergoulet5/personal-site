@@ -1,0 +1,51 @@
+{
+    "home": {
+        "heading": "Hey, I'm Olivier 👋",
+        "subheading": { 
+            "part1": "Are you looking for a web developer for your project?",
+            "part2": "Send me a message!"
+        },
+        "buttons": {
+            "contact": "Contact",
+            "download": "Download CV"
+        }
+    },
+    "about": {
+        "heading": "About",
+        "aboutMe": {
+            "heading": "About Me",
+            "part1": "I have been passionate about software development for many years now. My interests shifted from game development to systems programming and, finally, into web development.",
+            "part2": "When I am not sitting in front of a computer, I like to watch hockey and MMA."
+        },
+        "education": {
+            "heading": "Education",
+            "part1": "In 2018, I moved to Toronto to study Computer Programming & Analysis at Seneca College.",
+            "part2": "I attended multiple hackathons during my college years and met plenty of interesting future software developers. These events inspired me to keep learning beyond the standard curriculum and pursue side-projects that I can be proud of."
+        },
+        "caption": "Attending the first NSBEHacks at the University of Toronto, 2018."
+    },
+    "projects": {
+        "heading": "Projects",
+        "privanote": {
+            "heading": "PrivaNote",
+            "description": {
+                "part1": "PrivaNote is a secure note-taking desktop application that runs on macOS and Windows. It allows users to take notes in Markdown to enable quick and beautiful note-taking on the fly.",
+                "part2": "Notes can synchronize with cloud storage such as Google Drive or PrivaNote Vault. If the user chooses PrivaNote Vault, they will have the ability to synchronize their notes privately and securely using E2E encryption."
+            },
+            "caption": "Editing a note in PrivaNote.",
+            "technologies": {
+                "react": "React was used as the primary front-end library for composing the user interface. It allowed for dynamic and reactive components to be displayed in the view.",
+                "electron": "The team chose electron to create a cross-platform desktop application using web technologies."
+            }
+        }
+    },
+    "navigationBar": {
+        "links": {
+            "home": "Home",
+            "about": "About",
+            "projects": "Projects",
+            "resume": "Resume",
+            "contact": "Contact"
+        }
+    }
+}

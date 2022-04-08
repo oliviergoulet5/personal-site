@@ -1,0 +1,37 @@
+{
+    "home": {
+        "heading": "Salut, je m'appelle Olivier 👋",
+        "subheading": {
+            "part1": "Votre projet nécessite-t-il un développeur web?",
+            "part2": "Lancez-moi un message!"
+        },
+        "buttons": {
+            "contact": "Contactez",
+            "download": "Téléchargez CV"
+        }
+    },
+    "about": {
+        "heading": "À propos",
+        "aboutMe": {
+            "heading": "À propos de moi",
+            "part1": "Je suis passionné par le développement de logiciel depuis de nombreuse années. Mes intérèts sont passés du développement de jeux vidéo à la programmation des systèmes et finalement, au développement web.",
+            "part2": "Quand je suis pas à un ordinateur, j'aime regarder le hockey et l'AMM."
+        },
+        "education": {
+            "heading": "Education",
+            "part1": "En 2018, j'ai déménagé à Toronto pour étudier le «Computer Programming & Analysis» au collège de Seneca.",
+            "part2": "J'ai participé à plusieurs hackathons au cours de mes années universitaires et j'ai rencontré de nombreux futurs développeurs de logiciels intéressants. Ces événements m'ont donné envie de continuer à apprendre au-delà du programme et de poursuivre des «side-projects» dont je peux être fier."
+        },
+        "caption": "Aux premiers NSBEHacks à l'Université de Toronto, en 2018."
+
+    },
+    "navigationBar": {
+        "links": {
+            "home": "Acceuil",
+            "about": "À propos",
+            "projects": "Projets",
+            "resume": "Resumé",
+            "contact": "Contactez"
+        }
+    }
+}
