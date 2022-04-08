@@ -10,4 +10,8 @@
     .ps-subheading {
         @apply text-sm text-green-300 font-bold uppercase pb-3 pt-3;
     }
+
+    .ps-caption {
+        @apply text-center text-xs text-gray-300 mt-4
+    }
 }

@@ -24,6 +24,21 @@
         },
         "caption": "Attending the first NSBEHacks at the University of Toronto, 2018."
     },
+    "projects": {
+        "heading": "Projects",
+        "privanote": {
+            "heading": "PrivaNote",
+            "description": {
+                "part1": "PrivaNote is a secure note-taking desktop application that runs on macOS and Windows. It allows users to take notes in Markdown to enable quick and beautiful note-taking on the fly.",
+                "part2": "Notes can synchronize with cloud storage such as Google Drive or PrivaNote Vault. If the user chooses PrivaNote Vault, they will have the ability to synchronize their notes privately and securely using E2E encryption."
+            },
+            "caption": "Editing a note in PrivaNote.",
+            "technologies": {
+                "react": "React was used as the primary front-end library for composing the user interface. It allowed for dynamic and reactive components to be displayed in the view.",
+                "electron": "The team chose electron to create a cross-platform desktop application using web technologies."
+            }
+        }
+    },
     "navigationBar": {
         "links": {
             "home": "Home",

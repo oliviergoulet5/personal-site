@@ -7,7 +7,7 @@ export function About() {
         <div id="about" className="">
             <h1 className="ps-heading">{ t("about.heading") }</h1>
             <div className="flex flex-col sm:flex-row sm:space-x-8 sm:space-y-0 space-y-8">
-                <div className="text-gray-300 flex flex-col space-y-4 sm:space-y-0">
+                <div className="text-gray-300 flex flex-col space-y-12">
                     <div>
                         <h2 className="ps-subheading">{ t("about.aboutMe.heading") }</h2>
                         <p className="mb-3">{ t("about.aboutMe.part1") }</p>

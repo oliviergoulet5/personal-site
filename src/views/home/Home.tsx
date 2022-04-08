@@ -13,7 +13,7 @@ export function Home() {
             <div className="relative m-auto w-full">
                 <span className="absolute h-96 w-full bg-repeat-x bg-contain" style={{ backgroundImage: "url(images/doodle.png)" }} />
             </div>
-        <div id="home" className="relative flex flex-col h-screen justify-center mb-24">
+        <div id="home" className="relative flex flex-col h-screen justify-center">
             <div className="mt-56 flex-shrink flex flex-col-reverse md:flex-row justify-center sm:text-left sm:justify-start items-center">
                 <div className="text-center md:text-left ml-8">
                     <h1 className='text-2xl md:text-6xl mb-2'>{ t("home.heading") }</h1>
