@@ -14,9 +14,8 @@ export function Home() {
                 <span className="absolute h-96 w-full bg-repeat-x bg-contain" style={{ backgroundImage: "url(images/doodle.png)" }} />
             </div>
         <div className="relative flex flex-col h-screen justify-center">
-            <span className="w-full h-72 flex-initial"></span>
-            <div className="flex flex-col-reverse md:flex-row justify-center sm:text-left sm:justify-start items-center">
-                <div className="text-center md:text-left">
+            <div className="mt-56 flex-shrink flex flex-col-reverse md:flex-row justify-center sm:text-left sm:justify-start items-center">
+                <div className="text-center md:text-left ml-8">
                     <h1 className='text-2xl md:text-6xl mb-2'>{ t("home.heading") }</h1>
                     <p className="text-gray-400 text-lg md:text-2xl">{ t("home.subheading.part1") }</p>
                     <p className="text-gray-400 text-lg md:text-2xl">{ t("home.subheading.part2") }</p>
@@ -29,7 +28,7 @@ export function Home() {
                 <FilledRoundButton text={ t("home.buttons.contact") } />
                 <RoundButton text={ t("home.buttons.download") } />
             </div>
-            <div className="m-auto">
+            <div className="m-auto self-end">
                 <IconButton icon={ IoArrowDown } /> 
             </div>
         </div>
