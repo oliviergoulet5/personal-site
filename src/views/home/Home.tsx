@@ -7,7 +7,11 @@ export function Home() {
     const { t } = useTranslation();
 
     return (
-        <div className="flex flex-col h-screen justify-center">
+        <>
+            <div className="relative m-auto w-full">
+                <span className="absolute h-96 w-full bg-repeat-x bg-contain" style={{ backgroundImage: "url(images/doodle.png)" }} />
+            </div>
+        <div className="relative flex flex-col h-screen justify-center">
             <div className="flex flex-col-reverse md:flex-row justify-center sm:text-left sm:justify-start items-center">
                 <div className="text-center md:text-left">
                     <h1 className='text-2xl md:text-6xl mb-2'>{ t("home.heading") }</h1>
@@ -23,5 +27,7 @@ export function Home() {
                 <RoundButton text={ t("home.buttons.download") } />
             </div>
         </div>
+        </>
+
     )
 }
