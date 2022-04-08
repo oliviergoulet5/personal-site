@@ -20,13 +20,13 @@ export function Contact() {
                 </p>
                 <div className="flex space-x-3">
                     <button onClick={  () => setActiveSection("discord") } className="transition duration-300 rounded-full p-2 border-2 border-transparent hover:border-white" style={{ backgroundColor: "#5865F2" }}>
-                        <SiDiscord color="#FFF" size="100%" className="h-8" />
+                        <SiDiscord color="#FFF" size="100%" className="h-8 w-8" />
                     </button>
                     <a className="transition duration-300 rounded-full p-2 border-2 border-transparent hover:border-white" href="https://www.linkedin.com/in/olivier-goulet/" style={{ backgroundColor: "#0e76a8" }}>
-                        <ImLinkedin2 color="#FFF" size="100%" className="h-8" />
+                        <ImLinkedin2 color="#FFF" size="100%" className="h-8 w-8" />
                     </a>
                     <a className="transition duration-300 rounded-full p-2 border-2 border-transparent hover:border-white" href="https://github.com/oliviergoulet5" style={{ backgroundColor: "#6e5494" }}>
-                        <DiGithubAlt color="#FFF" size="100%" className="h-8" />
+                        <DiGithubAlt color="#FFF" size="100%" className="h-8 w-8" />
                     </a>
                 </div>
             </div>
