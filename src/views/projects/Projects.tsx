@@ -9,7 +9,7 @@ export function Projects() {
     const { t } = useTranslation();
 
     return (
-        <div id="projects">
+        <div id="projects" className="min-h-screen">
             <h1 className="ps-heading">{ t("projects.heading") }</h1>
             <div>
                 <h2 className="ps-subheading hover:underline underline-offset-2 inline-block cursor-pointer">

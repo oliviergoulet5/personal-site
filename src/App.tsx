@@ -7,10 +7,7 @@ import { Contact } from './views/contact/Contact';
 import { Home } from './views/home/Home';
 import { Projects } from './views/projects/Projects';
 import { IoArrowUp } from 'react-icons/io5';
-
-const scrollToTop = (el: HTMLElement | null) => {
-    if (el) el.scrollIntoView();
-}
+import { scrollToTop } from './utils/scroll-to-top';
 
 export function App() {
     const [menuActive, setMenuActive] = useState(false);
@@ -24,7 +21,7 @@ export function App() {
             <main className="relative w-11/12 sm:w-10/12 m-auto">
                 <div className="hidden bg-yellow-300 bg-opacity-20 border-2 rounded-lg p-1 mb-2 text-center border-opacity-20 border-yellow-500 text-sm">Website is still in development!</div>
                 <div className="flex flex-col space-y-24">
-                <Home />
+                <Home/>
                 <About />
                 <Projects />
                 <Contact />

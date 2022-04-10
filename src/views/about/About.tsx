@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 export function About() {
     const { t } = useTranslation();
     return (
-        <div id="about" className="">
+        <div id="about" className="min-h-screen">
             <h1 className="ps-heading">{ t("about.heading") }</h1>
             <div className="flex flex-col sm:flex-row sm:space-x-8 sm:space-y-0 space-y-8">
                 <div className="text-gray-300 flex flex-col space-y-12">

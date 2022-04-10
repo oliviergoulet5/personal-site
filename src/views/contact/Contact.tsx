@@ -10,7 +10,7 @@ export function Contact() {
     const [activeSection, setActiveSection] = useState<Section>("none");
 
     return (
-        <div id="contact">
+        <div id="contact" className="">
             <h1 className="ps-heading text-center mb-3">Contact</h1>
             <p className="text-gray-300 text-center mb-6">Feel free to send me a message through the site or social media!</p>
                 <div className="flex justify-center w-full">

@@ -25,7 +25,7 @@ export function Home() {
                 </div>
             </div>
             <div className="flex justify-center space-x-2 my-24">
-                <FilledRoundButton text={ t("home.buttons.contact") } />
+                <a href="/#contact"><FilledRoundButton text={ t("home.buttons.contact") } /></a>
                 <RoundButton text={ t("home.buttons.download") } />
             </div>
             <div className="m-auto self-end">

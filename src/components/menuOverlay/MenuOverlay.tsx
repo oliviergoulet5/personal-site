@@ -20,7 +20,6 @@ export function MenuOverlay({ onClose: close }: Props) {
                 <MenuLink href="/#home" text={t("navigationBar.links.home")} />
                 <MenuLink href="/#about" text={t("navigationBar.links.about")} />
                 <MenuLink href="/#projects" text={t("navigationBar.links.projects")} />
-                <MenuLink href="/#resume" text={t("navigationBar.links.resume")} />
                 <MenuLink href="/#contact" text={t("navigationBar.links.contact")} />
             </ul>
             <div className="flex p-6 space-x-8 mt-8">
