@@ -39,6 +39,22 @@
             }
         }
     },
+    "contact": {
+        "heading": "Contact",
+        "subheading": "Feel free to send me a message through the site or social media!",
+        "options": {
+            "message": "Message",
+            "or": "or",
+            "discord": "My Discord username is zxcv#6382."
+        },
+        "form": {
+            "email": "Email",
+            "name": "Name",
+            "subject": "Subject",
+            "message": "Message",
+            "send": "Send"
+        }
+    },
     "navigationBar": {
         "links": {
             "home": "Home",
