@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { MenuOverlay } from './components/menuOverlay/MenuOverlay';
 import { NavigationBar } from './components/navigationBar/NavigationBar';
+import { RoundButton } from './components/roundButton/RoundButton';
 import { About } from './views/about/About';
 import { Contact } from './views/contact/Contact';
 import { Home } from './views/home/Home';
 import { Projects } from './views/projects/Projects';
+import { IoArrowUp } from 'react-icons/io5';
+
+const scrollToTop = (el: HTMLElement | null) => {
+    if (el) el.scrollIntoView();
+}
 
 export function App() {
     const [menuActive, setMenuActive] = useState(false);
+    const appRef = useRef<HTMLDivElement>(null);
 
     return (
-        <div className="bg-gray-800 h-screen text-white">
+        <div ref={appRef} className="bg-gray-800 h-screen text-white">
             <header>
                 <NavigationBar menuActive={menuActive} onMenuClick={ () => setMenuActive(!menuActive) } />
             </header>
@@ -24,9 +31,18 @@ export function App() {
                 </div>
                 { menuActive && <MenuOverlay onClose={ () => setMenuActive(!menuActive) } />}
             </main>
-            <footer className="h-14 w-full">
-                
-            </footer>
+            <footer className="w-full">
+                <div className="flex justify-center h-64 items-center">
+                <RoundButton 
+                    text="Scroll to Top" 
+                    icon={<IoArrowUp color="#FFF" size="100%" className="h-6 w-6 mr-2" />} 
+                    onClick={ () => {
+                        scrollToTop(appRef.current);
+                    }}
+                />
+                </div>
+
+            </footer>   
         </div>
     );
 }
