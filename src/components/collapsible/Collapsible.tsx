@@ -22,7 +22,7 @@ export function Collapsible({ heading, icon, iconColor, children }: PropsWithChi
                     <span className="mr-2">{ React.createElement(icon, { size: "100%" ,color: iconColor, className: "inline-block w-8" }) }</span> 
                     { heading }
                 </span>
-                { collapsed ? <IoChevronUp size="100%" className="w-8" /> : <IoChevronDown size="100%" className="w-8" /> }
+                { !collapsed ? <IoChevronUp size="100%" className="w-8" /> : <IoChevronDown size="100%" className="w-8" /> }
             </div>
             { !collapsed && 
                 <div className="flex mt-2">
