@@ -35,7 +35,11 @@
             "caption": "Editing a note in PrivaNote.",
             "technologies": {
                 "react": "React was used as the primary front-end library for composing the user interface. It allowed for dynamic and reactive components to be displayed in the view.",
-                "electron": "The team chose electron to create a cross-platform desktop application using web technologies."
+                "electron": "The team chose electron to create a cross-platform desktop application using web technologies.",
+                "prisma": "We needed an ORM to interface with our Postgresql database. We selected Prisma because it works amazingly well with TypeScript.",
+                "tailwindcss": "We used TailwindCSS to style our application. It is quick and easy to whip up some nice styles in TailwindCSS. They also offer nice defaults for themeing.",
+                "typescript": "TypeScript was a must-have for the project. It offers type-safety and type inference which speeds up our development time and prevents certain bugs from occurring.",
+                "webpack": "We created our own webpack configuration."
             }
         }
     },
