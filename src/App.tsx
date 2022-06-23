@@ -8,6 +8,7 @@ import { Home } from './views/home/Home';
 import { Projects } from './views/projects/Projects';
 import { IoArrowUp } from 'react-icons/io5';
 import { scrollToTop } from './utils/scroll-to-top';
+import { Experiences } from './views/experiences/Experiences';
 
 export function App() {
     const [menuActive, setMenuActive] = useState(false);
@@ -24,6 +25,7 @@ export function App() {
                 <Home/>
                 <About />
                 <Projects />
+                <Experiences />
                 <Contact />
                 </div>
                 { menuActive && <MenuOverlay onClose={ () => setMenuActive(!menuActive) } />}
