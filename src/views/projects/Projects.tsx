@@ -4,6 +4,7 @@ import { SiTailwindcss, SiTypescript, SiWebpack } from 'react-icons/si';
 import { IoLink, IoLogoElectron, IoLogoReact, IoPrism } from 'react-icons/io5';
 import { Collapsible } from '../../components/collapsible/Collapsible';
 import { Collaborator } from '../../components/collaborator/Collaborator';
+import { Carousel } from '../../components/carousel/Carousel';
 
 export function Projects() {
     const { t } = useTranslation();
@@ -57,10 +58,20 @@ export function Projects() {
                                 </div>
                             </div>
                         </div>
-                        <figure className="">
-                            <img className="rounded-lg shadow-xl w-5/6 m-auto" src="https://camo.githubusercontent.com/100ab20dc9470f417c33ad2586a27021ce9cb09487a31a3037f08eb50664ed04/68747470733a2f2f692e696d6775722e636f6d2f4a4144784c47312e706e67" />
-                            <figcaption className="ps-caption">{ t("projects.privanote.caption") }</figcaption>
-                        </figure>
+                        <Carousel images={[
+                            {
+                                src: "https://camo.githubusercontent.com/100ab20dc9470f417c33ad2586a27021ce9cb09487a31a3037f08eb50664ed04/68747470733a2f2f692e696d6775722e636f6d2f4a4144784c47312e706e67",
+                                caption: "Editing a note in PrivaNote."
+                            },
+                            {
+                                src: "https://i.imgur.com/XR85nsa.png",
+                                caption: "The settings page for PrivaNote."
+                            },
+                            {
+                                src: "https://i.imgur.com/ZZ36w2p.png",
+                                caption: "The cloud integration page displaying Google Drive as a connected cloud provider."
+                            }
+                        ]} />
                     </div>
                 </div>
             </div>
