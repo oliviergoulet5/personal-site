@@ -43,6 +43,47 @@
             }
         }
     },
+    "timeline": {
+        "heading": "Timeline",
+        "events": {
+            "seneca-college": { 
+                "title": "Seneca College",
+                "description1": "In September of 2018, I began my studies in Computer Programming & Analysis at Seneca College in Toronto, ON. It was a three year program where we learned about web development, database, cloud computing, game development, and systems programming.", 
+                "description2": "",
+                "date": "Sep 2018"
+            },
+            "nsbehacks": {
+                "title": "NSBEHacks 2018",
+                "description1": "My friends and I attended the NSBEHacks hackathon at the University of Toronto. It was our first hackathon and we had learned so much from the experience and had good fun.",
+                "description2": "",
+                "date": "Nov 2018"
+            },
+            "hack-the-valley": {
+                "title": "Hack the Valley III & IV",
+                "description1": "Hack the Valley III was where I found my passion for web development. It is where I first learned React and we used it to create a simple front-end to an e-commerce site.",
+                "description2": "The next year I attended Hack the Valley IV where I paired up with an electrical engineering student. We worked on an application where you could track items on a map with the use of BLE beacons akin to AirTags or Tile devices.",
+                "date": "Feb 2019 and Feb 2020"
+            },
+            "privanote": {
+                "title": "PrivaNote",
+                "description1": "As mentioned above, PrivaNote was our note-taking application which was composed by React, Electron, and other technologies. This application was my greatest project during the entirety of my studies. From inception to deployment we have learned so much.",
+                "description2": "",
+                "date": "Apr 2021 - Dec 2021"
+            },
+            "graduation": {
+                "title": "Graduation",
+                "description1": "Earned my advanced diploma in Computer Programming & Analysis at Seneca College.",
+                "description2": "P.S. In case you're looking for me in this picture, I am not there. I graduated during COVID-19 and sadly didn't get a graduation ceremony.",
+                "date": "Dec 2021"
+            },
+            "eclipse-foundation": {
+                "title": "Eclipse Foundation",
+                "description1": "Working as a front-end web developer at the Eclipse Foundation. It is my first official role in the industry!",
+                "description2": "",
+                "date": "Jul 2022 - Current"
+            }
+        }
+    },
     "contact": {
         "heading": "Contact",
         "subheading": "Feel free to send me a message through the site or social media!",
