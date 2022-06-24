@@ -26,7 +26,9 @@ export function Experiences() {
             
             <Timeline 
                 setSelectedEvent={ setSelectedEvent }
-                events={ events } />
+                events={ events } 
+                selectedEvent={selectedEvent}
+            />
         </div>
     )
 }
