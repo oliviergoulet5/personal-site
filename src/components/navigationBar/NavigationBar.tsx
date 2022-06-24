@@ -22,6 +22,7 @@ export function NavigationBar({ menuActive, onMenuClick: menuClick }: Props) {
                 <NavigationLink href="/#home" text={t("navigationBar.links.home")} />
                 <NavigationLink href="/#about" text={t("navigationBar.links.about")} />
                 <NavigationLink href="/#projects" text={t("navigationBar.links.projects")} />
+                <NavigationLink href="/#experiences" text={t("navigationBar.links.experiences")} />
                 <NavigationLink href="/#contact" text={t("navigationBar.links.contact")} />
             </ul>
             <div>

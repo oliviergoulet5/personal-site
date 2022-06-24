@@ -12,7 +12,7 @@ export function Experiences() {
 
     return (
         <div id="experiences" className="min-h-screen">
-            <h1 className="ps-heading">Timeline</h1>
+            <h1 className="ps-heading">Experiences</h1>
             <div className="mb-24 flex justify-between">
                 <div className="w-1/3">
                     <h2 className="ps-subheading">{ t(`timeline.events.${currentEvent.id}.title`) }</h2>
