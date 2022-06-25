@@ -5,11 +5,12 @@
 @layer utilities {
     @keyframes animate-selection {
         from {
-            @apply border-gray-500 hover:border-gray-400;
+            @apply border-gray-400;
+            transform: scale(0.975)
         }
     
         to {
-            @apply border-green-300;
+            @apply border-green-300 scale-100;
         }
     }
 }
