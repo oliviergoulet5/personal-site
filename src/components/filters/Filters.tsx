@@ -3,25 +3,17 @@ import { HiOutlineFilter } from "react-icons/hi";
 import { FilterTag } from "../filterTag/FilterTag";
 import { Filter } from "../../types";
 
+// Needs refactoring. Dislike the state management and props between Experiences.tsx and Filters.tsx
+
 interface Props {
-    filters: Filter[];
+    enabledFilters: Filter[];
+    onFilterRemove: (filter: Filter) => void;
+    onFilterAdd: (filter: Filter) => void;
+    allFilters: Filter[];
 }
 
-export function Filters({ filters }: Props) {
-    const defaultFilters = filters.filter((f) => f.defaultEnabled)
-    const [enabledFilters, setEnabledFilters] = useState<Filter[]>(defaultFilters);
+export function Filters({ enabledFilters, onFilterRemove, onFilterAdd, allFilters }: Props) {
     const [dropdownVisible, setDropdownVisible] = useState(false);
-
-    const addFilter = (filter: Filter) => {
-        if (!enabledFilters.includes(filter)) {
-            setEnabledFilters([...enabledFilters, filter]);
-        }
-    }
-
-    const removeFilter = (filter: Filter) => {
-        const updatedFilters = enabledFilters.filter((f) => f.propertyName !== filter.propertyName);
-        setEnabledFilters([...updatedFilters])
-    }
 
     return (
         <>
@@ -31,20 +23,20 @@ export function Filters({ filters }: Props) {
                     Filters
                 </button>
                 <div className="flex text-xs align-middle space-x-3">
-                    { enabledFilters.map((f) => <FilterTag onClick={ () => removeFilter(f) } propertyName={ f.propertyName } />)}
+                    { enabledFilters.map((f) => <FilterTag onClick={ () => onFilterRemove(f) } propertyName={ f.propertyName } />)}
                 </div>
             </div>
             { dropdownVisible && 
                 <div className="absolute p-4 bg-gray-700 shadow-2xl rounded-lg text-gray-300">
                     <h1 className="text-md text-gray-300 font-semibold">Filters</h1>
                     <form className="flex flex-col space-y-2 text-sm mt-4">
-                        { filters.map((f) => 
+                        { allFilters.map((f) => 
                             <div>
                                 <input onChange={ (event) => { 
                                     if (event.target.checked) { 
-                                        addFilter(f) 
+                                        onFilterAdd(f) 
                                     } else { 
-                                        removeFilter(f) 
+                                        onFilterRemove(f) 
                                     }
                                 }} checked={ enabledFilters.find((ef) => ef.propertyName === f.propertyName) ? true : false } className="mr-2" type="checkbox" id={`filter-${f.propertyName.toLowerCase()}`} />
                                 <label htmlFor={`filter-${ f.propertyName.toLowerCase() }`}>{ f.propertyName }</label>

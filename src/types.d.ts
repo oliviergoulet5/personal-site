@@ -6,6 +6,7 @@ export interface Event {
     title: string;
     id: string;
     imageSrc?: string;
+    defaultEnabled?: boolean;
 }
 
 export interface Filter {
