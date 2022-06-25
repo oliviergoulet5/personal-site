@@ -32,6 +32,7 @@ export function Experiences() {
 
     return (
         <div id="experiences" className="min-h-screen">
+            <p className="w-full bg-red-500/10 border border-red-500 text-red-300 p-2 rounded-lg mb-7">This section is still a work in progress and contains many bugs. It needs a big refactor as well.</p>
             <h1 className="ps-heading">Experiences</h1>
             <Filters onFilterRemove={ handleFilterRemove } onFilterAdd={ handleFilterAdd } allFilters={initialFilters} enabledFilters={ filters } />
             <div className="mb-24 flex justify-between">
