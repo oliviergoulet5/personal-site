@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @keyframes animate-selection {
+        from {
+            @apply border-gray-500 hover:border-gray-400;
+        }
+    
+        to {
+            @apply border-green-300;
+        }
+    }
+}

@@ -2,6 +2,7 @@ import { EventType, Event } from "../../types"
 import { IoSchool, IoBriefcase, IoConstruct, IoHappy } from "react-icons/io5";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import "./animate.css";
 
 interface Props {
     event: Event
@@ -33,6 +34,11 @@ export function TimelineEvent({ event, isSelected, onClick }: Props) {
         <div
             onClick={ onClick }
             className={`cursor-pointer w-8 h-8 p-1 rounded-full border-2 z-10 bg-gray-800 ${ circleColor }`}
+            style={{
+                animationName: isSelected ? "animate-selection" : undefined,
+                animationTimingFunction: "ease-in-out",
+                animationDuration: "0.5s"
+            }}
         >
             { React.createElement(icon.element, icon.props) }
             <div className={`mt-6 text-center whitespace-nowrap ${ isSelected || "hidden lg:block"}`}>
