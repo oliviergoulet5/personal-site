@@ -7,3 +7,8 @@ export interface Event {
     id: string;
     imageSrc?: string;
 }
+
+export interface Filter {
+    propertyName: string;
+    defaultEnabled: boolean;
+}
