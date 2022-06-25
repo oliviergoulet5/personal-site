@@ -1,6 +1,7 @@
 import { EventType, Event } from "../../types"
 import { IoSchool, IoBriefcase, IoConstruct, IoHappy } from "react-icons/io5";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 interface Props {
     event: Event
@@ -17,6 +18,7 @@ const iconMap: Record<EventType, any> = {
 }
 
 export function TimelineEvent({ event, isSelected, onClick }: Props) {
+    const { t } = useTranslation();
     const icon = { 
         element: iconMap[event.type],
         props: {
@@ -34,8 +36,8 @@ export function TimelineEvent({ event, isSelected, onClick }: Props) {
         >
             { React.createElement(icon.element, icon.props) }
             <div className={`mt-6 text-center whitespace-nowrap ${ isSelected || "hidden lg:block"}`}>
-                <p className="text-sm">{ event.title }</p>
-                <p className="text-xs">{ event.date }</p>
+                <p className="text-sm">{ t(`experiences.events.${ event.id }.title`) }</p>
+                <p className="text-xs">{ t(`experiences.events.${ event.id }.date`) }</p>
             </div>
         </div>
     )

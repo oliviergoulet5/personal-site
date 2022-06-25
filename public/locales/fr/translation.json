@@ -24,6 +24,56 @@
         },
         "caption": "Aux premiers NSBEHacks à l'Université de Toronto, en 2018."
     },
+    "experiences": {
+        "heading": "Expériences",
+        "filters": {
+            "filter-button": "Filtres"
+        },
+        "event-types": {
+            "activity": "Activités",
+            "project": "Projets",
+            "education": "Éducation",
+            "career": "Carrière"
+        },
+        "events": {
+            "seneca-college": {
+                "title": "Collège Seneca",
+                "description1": "WIP",
+                "description2": "WIP",
+                "date": "Sep 2018"
+            },
+            "nsbehacks": {
+                "title": "NSBEHacks 2018",
+                "description1": "WIP",
+                "description2": "WIP",
+                "date": "Nov 2018"
+            },
+            "hack-the-valley": {
+                "title": "Hack the Valley III & IV",
+                "description1": "WIP",
+                "description2": "WIP",
+                "date": "Fev 2019 et Fev 2020"
+            },
+            "privanote": {
+                "title": "PrivaNote",
+                "description1": "WIP",
+                "description2": "WIP",
+                "date": "Avr 2021 - Dec 2021"
+            },
+            "graduation": {
+                "title": "Graduation",
+                "description1": "WIP",
+                "description2": "WIP",
+                "date": "Dec 2021"
+            },
+            "eclipse-foundation": {
+                "title": "Fondation Eclipse",
+                "description1": "WIP",
+                "description2": "WIP",
+                "date": "Jul 2022 - Présent"
+            }
+        }
+    },
     "contact": {
         "heading": "Contactez-moi",
         "subheading": "N'hésitez pas à m'envoyer un message sur le site ou sur les réseaux sociaux!",

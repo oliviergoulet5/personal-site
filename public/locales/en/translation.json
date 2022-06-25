@@ -43,8 +43,17 @@
             }
         }
     },
-    "timeline": {
-        "heading": "Timeline",
+    "experiences": {
+        "heading": "Experiences",
+        "filters": {
+            "filter-button": "Filter"
+        },
+        "event-types": {
+            "activity": "Activities",
+            "project": "Projects",
+            "education": "Education",
+            "career": "Career"
+        },
         "events": {
             "seneca-college": { 
                 "title": "Seneca College",
@@ -80,7 +89,7 @@
                 "title": "Eclipse Foundation",
                 "description1": "Working as a front-end web developer at the Eclipse Foundation. It is my first official role in the industry!",
                 "description2": "",
-                "date": "Jul 2022 - Current"
+                "date": "Jul 2022 - Present"
             }
         }
     },
