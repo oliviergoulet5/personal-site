@@ -3,24 +3,23 @@ import { useTranslation } from "react-i18next";
 import { Timeline } from "../../components/timeline/Timeline";
 import { events } from "../../data/events";
 import { Filters } from "../../components/filters/Filters";
-import { Filter } from "../../types";
+import { Filter, Event } from "../../types";
 
 const initialFilters = [
-    { propertyName: "Education", defaultEnabled: true },
-    { propertyName: "Career", defaultEnabled: true },
-    { propertyName: "Activity", defaultEnabled: true },
-    { propertyName: "Project", defaultEnabled: true },
+    { id: "education", name: "Education", defaultEnabled: true },
+    { id: "career", name: "Career", defaultEnabled: true },
+    { id: "activity", name: "Activity", defaultEnabled: true },
+    { id: "project", name: "Project", defaultEnabled: true },
 ]
 
 export function Experiences() {
-    const [selectedEvent, setSelectedEvent] = useState(0);
-    const currentEvent = events[selectedEvent];
+    const [selectedEvent, setSelectedEvent] = useState<Event>(events[0]);
     const { t } = useTranslation();
 
     const [filters, setFilters] = useState<Filter[]>(initialFilters);
 
     const handleFilterRemove = (filter: Filter) => {
-        const updatedFilters = filters.filter(f => f.propertyName !== filter.propertyName);
+        const updatedFilters = filters.filter(f => f.id !== filter.id);
         setFilters([...updatedFilters]);
     }
 
@@ -37,18 +36,18 @@ export function Experiences() {
             <Filters onFilterRemove={ handleFilterRemove } onFilterAdd={ handleFilterAdd } allFilters={initialFilters} enabledFilters={ filters } />
             <div className="mb-24 flex justify-between">
                 <div className="w-1/3">
-                    <h2 className="ps-subheading">{ t(`timeline.events.${currentEvent.id}.title`) }</h2>
-                    <p className="mb-2">{ t(`timeline.events.${currentEvent.id}.description1`)}</p>
-                    <p>{ t(`timeline.events.${currentEvent.id}.description2`) }</p>
+                    <h2 className="ps-subheading">{ t(`timeline.events.${selectedEvent.id}.title`) }</h2>
+                    <p className="mb-2">{ t(`timeline.events.${selectedEvent.id}.description1`)}</p>
+                    <p>{ t(`timeline.events.${selectedEvent.id}.description2`) }</p>
                 </div>
                 <figure className="m-auto">
-                    <img className="rounded-lg shadow-xl h-96" src={currentEvent.imageSrc} />
+                    <img className="rounded-lg shadow-xl h-96" src={selectedEvent.imageSrc} />
                 </figure>
             </div>
             
             <Timeline 
                 setSelectedEvent={ setSelectedEvent }
-                events={ events.filter((e) => filters.find((f) => f.propertyName.toLowerCase() === e.type)) } 
+                events={ events.filter((e) => filters.find((f) => f.id === e.type)) } 
                 selectedEvent={selectedEvent}
             />
         </div>

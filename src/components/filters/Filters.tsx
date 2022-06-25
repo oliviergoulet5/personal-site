@@ -24,7 +24,7 @@ export function Filters({ enabledFilters, onFilterRemove, onFilterAdd, allFilter
                     Filters
                 </button>
                 <div className="flex text-xs align-middle space-x-3">
-                    { enabledFilters.map((f) => <FilterTag onClick={ () => onFilterRemove(f) } propertyName={ f.propertyName } />)}
+                    { enabledFilters.map((f) => <FilterTag onClick={ () => onFilterRemove(f) } propertyName={ f.name } />)}
                 </div>
             </div>
             { visible && 
@@ -39,8 +39,8 @@ export function Filters({ enabledFilters, onFilterRemove, onFilterAdd, allFilter
                                     } else { 
                                         onFilterRemove(f) 
                                     }
-                                }} checked={ enabledFilters.find((ef) => ef.propertyName === f.propertyName) ? true : false } className="mr-2" type="checkbox" id={`filter-${f.propertyName.toLowerCase()}`} />
-                                <label htmlFor={`filter-${ f.propertyName.toLowerCase() }`}>{ f.propertyName }</label>
+                                }} checked={ enabledFilters.find((ef) => ef.id === f.id) ? true : false } className="mr-2" type="checkbox" id={`filter-${f.id}`} />
+                                <label htmlFor={`filter-${ f.id }`}>{ f.name }</label>
                             </div>
                         )}
                         <div className="text-center">

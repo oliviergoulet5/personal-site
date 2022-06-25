@@ -10,6 +10,7 @@ export interface Event {
 }
 
 export interface Filter {
-    propertyName: string;
+    name: string;
+    id: string;
     defaultEnabled: boolean;
 }
