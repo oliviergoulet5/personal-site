@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HiOutlineFilter } from "react-icons/hi";
 import { FilterTag } from "../filterTag/FilterTag";
 import { Filter } from "../../types";
+import { useOutsideAlerter } from "../../hooks/outsideAlerter";
 
 // Needs refactoring. Dislike the state management and props between Experiences.tsx and Filters.tsx
 
@@ -13,12 +14,12 @@ interface Props {
 }
 
 export function Filters({ enabledFilters, onFilterRemove, onFilterAdd, allFilters }: Props) {
-    const [dropdownVisible, setDropdownVisible] = useState(false);
+    const { visible, setVisible, ref } = useOutsideAlerter<HTMLDivElement>(false);
 
     return (
         <>
             <div className="flex space-x-3 my-2">
-                <button onClick={ () => setDropdownVisible(!dropdownVisible)} className="flex items-center rounded-lg bg-gray-700 p-2 uppercase text-xs cursor-pointer text-gray-300 transition ease-in-out  hover:bg-gray-600">
+                <button onClick={ () => setVisible(!visible)} className="flex items-center rounded-lg bg-gray-700 p-2 uppercase text-xs cursor-pointer text-gray-300 transition ease-in-out  hover:bg-gray-600">
                     <HiOutlineFilter size="100%" className="h-4 w-4 text-gray-300 mr-1" />
                     Filters
                 </button>
@@ -26,8 +27,8 @@ export function Filters({ enabledFilters, onFilterRemove, onFilterAdd, allFilter
                     { enabledFilters.map((f) => <FilterTag onClick={ () => onFilterRemove(f) } propertyName={ f.propertyName } />)}
                 </div>
             </div>
-            { dropdownVisible && 
-                <div className="absolute p-4 bg-gray-700 shadow-2xl rounded-lg text-gray-300">
+            { visible && 
+                <div ref={ref} className="absolute p-4 bg-gray-700 shadow-2xl rounded-lg text-gray-300">
                     <h1 className="text-md text-gray-300 font-semibold">Filters</h1>
                     <form className="flex flex-col space-y-2 text-sm mt-4">
                         { allFilters.map((f) => 
